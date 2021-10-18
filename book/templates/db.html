@@ -1,0 +1,12 @@
+<html>
+<head>
+<h1>Books:</h1>
+</head>
+<body>
+<form action="/home/db" method="post">
+{% csrf_token %}
+<label for="q">Query</label>
+<input type="text" id="q" name="q">
+<input type="submit" value="Submit">
+</form>
+</html>

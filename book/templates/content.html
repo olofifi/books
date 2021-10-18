@@ -1,0 +1,22 @@
+<html>
+<head>
+<h1>Books:</h1>
+</head>
+<body>
+{%for book in books%}
+<hr>
+    {%for key, value in book.data.items%}
+        {%if key in fields%}
+        <li>{{key}}:</li>
+            {%for key2 in value.items%}
+                <ul>{{key2}}: &emsp;{{key2.values}}</ul>
+            {%endfor%}
+        {%else%}
+        <li>{{key}}: &emsp;{{value}}</li>
+        {%endif%}
+    {%endfor%}
+<br></br>
+{%endfor%}
+<hr>
+</body>
+</html>
